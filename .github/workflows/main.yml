@@ -14,19 +14,15 @@ jobs:
       uses: actions/checkout@v2
       with:
         fetch-depth: 0
-    
+
     - name: Set up Git
       run: |
         git config --global user.email "actions@github.com"
         git config --global user.name "GitHub Actions"
-    
-    - name: Add Hugging Face remote
-      env:
-        HF_TOKEN: ${{ secrets.HG }}
-      run: git remote add space https://huggingface.co/spaces/VandanaJn/Demo
-    
-    - name: Push to Hugging Face
+
+    - name: Push to Hugging Face Space
       env:
         HF_TOKEN: ${{ secrets.HG }}
       run: |
-        git remote set-url space https://VandanaJn:${{ secrets.HG }}@huggingface.co/spaces/VandanaJn/Demo
+        git remote add space https://VandanaJn:${{ secrets.HG }}@huggingface.co/spaces/VandanaJn/Demo
+        git push space main --force
