@@ -2,14 +2,23 @@ from transformers import pipeline
 import gradio as gr
 import torch
 
-model = pipeline("summarization")
+# Load summarization pipeline
+summarizer = pipeline("summarization", model="sshleifer/distilbart-cnn-12-6")
 
-def predict(prompt):
-    summary=model(prompt)[0]["summary_text"]
+# Define prediction function
+def summarize_text(text):
+    summary = summarizer(text)[0]["summary_text"]
     return summary
 
+# Build Gradio interface
 with gr.Blocks() as demo:
-    textbox=gr.Textbox(placeholder="enter text to summarize",lines=5)
-    gr.Interface(fn=predict, inputs=textbox, outputs="text")
+    gr.Markdown("## 📝 Text Summarization App")
+    input_text = gr.Textbox(placeholder="Enter text to summarize", lines=5, label="Input")
+    output_text = gr.Textbox(label="Summary")
+    summarize_button = gr.Button("Summarize")
 
+    summarize_button.click(fn=summarize_text, inputs=input_text, outputs=output_text)
+
+# Launch the app
 demo.launch()
+
