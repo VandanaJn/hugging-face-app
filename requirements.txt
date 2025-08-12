@@ -1,5 +1,6 @@
-gradio
-transformers
-tensorflow
-torch
-tf-keras
+gradio==5.42.0
+transformers==4.55.0
+tensorflow==2.19.0
+torch==2.8.0
+tf-keras==2.19.0
+openai-whisper==20250625
