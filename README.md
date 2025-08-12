@@ -22,10 +22,10 @@ This Hugging Face Space generates concise summaries from long-form text using a 
 
 ## 🚀 Features
 
-- Summarizes long text into short, readable content
-- Supports voice input via microphone (Chrome/Firefox recommended)
-- Fast and intuitive interface powered by Gradio
-- Uses Hugging Face Transformers
+- Summarizes long text into short, readable content  
+- Supports voice input via microphone (Chrome/Firefox recommended)  
+- Fast and intuitive interface powered by Gradio  
+- Uses Hugging Face Transformers  
 
 ---
 
@@ -37,8 +37,8 @@ This app uses [`sshleifer/distilbart-cnn-12-6`](https://huggingface.co/sshleifer
 
 ## 📋 How to Use
 
-1. Paste or type your text into the input box.
-2. Click **Submit** to generate a summary.
+1. Paste or type your text into the input box.  
+2. Click **Submit** to generate a summary.  
 3. Optionally, use the microphone to speak your input.
 
 ---
@@ -66,3 +66,9 @@ This project is licensed under MIT.
 ## 🙌 Acknowledgments
 
 Thanks to Hugging Face and the open-source community for making powerful NLP tools accessible to everyone.
+
+---
+
+## 🙏 Inspiration
+
+This project was inspired by [nogibjj's Hugging Face summarization app](https://github.com/nogibjj/hugging-face) and adapted for learning ML Ops and deployment with Gradio.
