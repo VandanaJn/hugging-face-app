@@ -45,7 +45,7 @@ This app uses [`sshleifer/distilbart-cnn-12-6`](https://huggingface.co/sshleifer
 
 ## 🖼️ Screenshot
 
-![App Screenshot](https://github.com/VandanaJn/hugging-face-app/blob/main/screenshot.png)
+![App Screenshot](https://github.com/VandanaJn/repo-common/blob/main/huggingface-app-screenshot.png)
 
 ---
 
